@@ -1,9 +1,52 @@
+# Physics Evolution ⚛️🎮
+
+**Physics Evolution** is an educational 2D game designed to help students understand how physical quantities can transform into other physical quantities through mathematical relationships.
+
+Instead of simply memorizing formulas, the player learns physics concepts through gameplay, decision-making, and experimentation.
+
+---
+
 ## 🎮 Play the Game
 
-📱 **This game is designed to be played on a mobile phone in portrait mode.**
+📱 **IMPORTANT: This game is designed primarily for smartphones and is meant to be played in portrait mode.**
 
-For the intended gameplay experience, please open the game on your **smartphone**.
+For the intended gameplay experience, open the game on your **mobile phone**.
 
 **[▶️ Play Physics Evolution](https://glowing-cranachan-ee7303.netlify.app/)**
 
 > **Mobile recommended:** The game uses touch-based controls and is optimized for portrait orientation.
+
+---
+
+## 🧠 How Does It Work?
+
+The player starts with a physical quantity and encounters special symbols representing other quantities or mathematical operators.
+
+The objective is to identify which quantities can create meaningful physics relationships and choose them during gameplay.
+
+For example:
+
+**Mass × Velocity → Momentum**
+
+\[
+p = mv
+\]
+
+When the player collects **v** while their current state is **m**, the state transforms into **momentum (p)**.
+
+The transformation also changes the player's firing pattern, making the physics relationship part of the gameplay mechanics.
+
+---
+
+## ⚛️ Learn Physics Through Gameplay
+
+The game treats physics formulas as a **transformation system**.
+
+For example:
+
+```text
+m
+↓ × v
+m × v
+↓
+p
