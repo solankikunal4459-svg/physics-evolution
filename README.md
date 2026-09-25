@@ -23,7 +23,7 @@ For the intended gameplay experience, open the game on your **mobile phone**.
 
 The player combines mass with velocity to transform into momentum, changing the particle's firing pattern.
 
-![Physics Evolution Transformation](physics-evolution-transformation.gif)
+![Physics Evolution Transformation](physics-evolution-transformation)
 
 ---
 
