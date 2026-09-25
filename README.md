@@ -46,7 +46,7 @@ For example:
 
 ```text
 m
-↓ × v
+↓ 
 m × v
 ↓
 p
