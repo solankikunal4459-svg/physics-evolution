@@ -38,7 +38,7 @@ If the player selects an invalid combination, the game provides feedback instead
 
 At the end of the run, the player can review the sequence of physical transformations.
 
-![Physics Evolution Transformation Record](physics-evolution-transformation.png)
+![Physics Evolution Transformation Record](physics-evolution-transformation-record.png)
 
 ---
 
