@@ -1,38 +1,46 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Physics Evolution ⚛️🎮
 
-# Run and deploy your AI Studio app
+**Physics Evolution** is an educational 2D game designed to help students understand how physical quantities can be transformed into other physical quantities through mathematical relationships.
 
-This contains everything you need to run your app locally.
+Instead of simply memorizing formulas, the player learns them through gameplay.
 
-View your app in AI Studio: https://ai.studio/apps/f2d135a3-5809-4061-b883-8af60a380faf
+## 🎮 Play the Game
 
-## Run Locally
+**[▶️ Play Physics Evolution](https://glowing-cranachan-ee7303.netlify.app/)**
 
-**Prerequisites:**  Node.js
+> Best experienced on a mobile phone in portrait mode.
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🧠 How Does It Work?
 
+The player starts with a physical quantity and encounters special symbols representing other quantities or mathematical operators.
 
-## Physics Evolution Network v3
+The goal is to choose the transformations that are physically meaningful.
 
-This build expands the playable evolution graph so all 22 existing physical quantities are reachable from the universal starting state `m`, and every quantity has at least one onward transformation.
+For example:
 
-The graph now includes:
-- Linear mechanics: `m → p → v → a → F → J/W/P`
-- Energy rates: `KE → P`, `PE → P`
-- Rotational loop: `m → I → α/ω → τ/L → F` and `ω → θ → ω`
-- Electrical loop: `W → q → I → V → R → V`
-- Field bridges: `F ↔ q`, `F ↔ E`, `F ↔ B`
-- Magnetic force: `q × v × B → F` and `B × qv → F`
-- Reverse/bridge pickups are represented as visible operator symbols.
+**Mass + Velocity → Momentum**
 
-The strategic pickup spawner now prefers undiscovered outgoing transformations, then falls back to already-discovered routes. This is intended to keep discovery moving while preserving repeatable evolution loops.
+\[
+p = mv
+\]
 
-Codex storage key was bumped to v3 so old prototype discovery state does not interfere with testing the expanded network.
+When the player collects **v** while having mass **m**, the state transforms into momentum **p**.
+
+Different transformations change the player's firing pattern and abilities.
+
+---
+
+## ⚛️ Learn Physics Through Gameplay
+
+The game is built around the idea that physics formulas can be treated as a transformation system.
+
+For example:
+
+```text
+m
+↓ × v
+p
+↓ × 1/m
+v
