@@ -25,13 +25,6 @@ The player combines mass with velocity to transform into momentum, changing the 
 
 ![Physics Evolution Gameplay](physics-evolution-gameplay.gif)
 
-### ❌ Not Every Combination Is Valid
-
-The game also teaches players that not every mathematical combination represents a meaningful physical quantity.
-
-If the player selects an invalid combination, the game provides feedback instead of allowing an incorrect transformation.
-
-![Invalid Physics Combination](physics-evolution-invalid-selection.png)
 
 ### 📖 Transformation Record
 
