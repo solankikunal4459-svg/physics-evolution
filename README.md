@@ -25,6 +25,26 @@ The player combines mass with velocity to transform into momentum, changing the 
 
 ![Physics Evolution Gameplay](physics-evolution-gameplay.gif)
 
+### ⚛️ Example Transformation
+
+**Mass → Momentum**
+
+The player combines mass with velocity to transform into momentum, changing the particle's firing pattern.
+
+![Physics Evolution Transformation](physics-evolution-transformation.png)
+
+### 🎮 Gameplay
+
+The player moves through the environment while collecting useful quantities and avoiding enemies.
+
+![Physics Evolution Gameplay](physics-evolution-gameplay.png)
+
+### 📖 Transformation Record
+
+At the end of the run, the player can review the sequence of physical transformations.
+
+![Physics Evolution Transformation Record](physics-evolution-transformation-record.png)
+
 ---
 
 ## 🧠 How Does It Work?
