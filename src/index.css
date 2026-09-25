@@ -1,0 +1,232 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  code, kbd, samp, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Prevent default touch actions like pull-to-refresh and zooming during game controls */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  max-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+
+/* Portrait-first mobile layout: keep HUD and controls inside narrow screens and safe areas. */
+@media (orientation: portrait) {
+  #game-hud {
+    padding: 0.45rem;
+    gap: 0.4rem;
+  }
+
+  #game-hud > div:first-child {
+    gap: 0.35rem;
+    align-items: flex-start;
+  }
+
+  #hud-identity-badge {
+    min-width: 0;
+    max-width: 62vw;
+    padding: 0.35rem 0.45rem;
+    gap: 0.4rem;
+  }
+
+  #hud-identity-badge > div:first-child {
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+  }
+
+  #hud-identity-badge .text-xs,
+  #hud-identity-badge .text-sm {
+    font-size: 0.62rem;
+    line-height: 0.8rem;
+  }
+
+  #hud-health-container {
+    width: 4.8rem;
+    padding: 0.3rem;
+  }
+
+  #game-hud > div:nth-child(2) {
+    max-height: 3.1rem;
+    overflow: hidden;
+  }
+
+  #touch-controls-layer button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  #ctrl-btn-autofire span {
+    display: none;
+  }
+}
+
+
+/* Never allow the game UI itself to create horizontal overflow on narrow phones. */
+#app-root-container, #app-root-container > div {
+  max-width: 100vw;
+  max-height: 100dvh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#physics-game-canvas {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media (orientation: portrait) {
+  #game-hud {
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #game-hud > div:first-child {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  #hud-identity-badge {
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+    max-width: 48vw;
+    overflow: hidden;
+  }
+
+  #hud-identity-badge > div:last-child {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  #hud-identity-badge .text-xs,
+  #hud-identity-badge .text-sm {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #hud-health-container {
+    flex: 0 0 4.6rem;
+  }
+
+  #game-hud > div:first-child > div:last-child {
+    flex: 0 0 auto;
+    min-width: 0;
+  }
+
+  #game-hud > div:first-child > div:last-child > div:first-child {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    gap: 0.45rem;
+  }
+
+  #game-hud > div:first-child > div:last-child > div:first-child > div:nth-child(2) {
+    display: none;
+  }
+
+  #game-hud > div:first-child > div:last-child > button {
+    width: 2.05rem;
+    height: 2.05rem;
+    min-width: 2.05rem;
+    min-height: 2.05rem;
+    padding: 0.4rem;
+  }
+
+  #game-hud > div:first-child > div:last-child > button svg {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+
+  #game-hud > div:nth-child(2) {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+
+  #touch-controls-layer {
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+}
+
+/* Portrait: keep the pause control reliably visible on narrow phones.
+   The header is allowed to compress its left-side info while the action
+   buttons remain a fixed, non-shrinking group. */
+@media (orientation: portrait) {
+  #game-hud > div:first-child {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+  }
+
+  #game-hud > div:first-child > div:first-child {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: calc(100% - 7.8rem);
+    overflow: hidden;
+  }
+
+  #game-hud > div:first-child > div:first-child > #hud-identity-badge {
+    max-width: calc(100% - 5.2rem);
+  }
+
+  #game-hud > div:first-child > div:last-child {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  /* The score/wave panel is redundant in portrait and was the main
+     source of horizontal crowding. */
+  #game-hud > div:first-child > div:last-child > div:first-child {
+    display: none;
+  }
+
+  #game-hud > div:first-child > div:last-child > button {
+    flex: 0 0 2.05rem;
+    width: 2.05rem;
+    min-width: 2.05rem;
+    height: 2.05rem;
+    min-height: 2.05rem;
+    padding: 0.4rem;
+  }
+
+  /* Restart is intentionally hidden in portrait to guarantee that the
+     essential Codex, Sound and Pause controls always fit. */
+  #hud-btn-restart {
+    display: none;
+  }
+
+  #hud-btn-pause {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+}

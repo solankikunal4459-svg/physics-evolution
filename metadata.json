@@ -1,0 +1,6 @@
+{
+  "name": "Physics Evolution",
+  "description": "A 2D arcade shooter where real Class 11-12 physics laws, dimensional analysis, and mathematical operators govern character transformations and combat mechanics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
